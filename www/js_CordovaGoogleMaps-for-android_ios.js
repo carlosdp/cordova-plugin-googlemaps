@@ -119,7 +119,8 @@ function CordovaGoogleMaps(execCmd) {
       attributeFilter: ['style', 'class']
     });
   };
-  self.one('start', attachObserver);
+  // @carlos: causes problems with state rendering
+  //self.one('start', attachObserver);
 
   self.on('isSuspended_changed', function(oldValue, newValue) {
     if (newValue) {
